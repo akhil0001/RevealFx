@@ -1,0 +1,222 @@
+/* taken from mary lou's block reveal effect demo */
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+body{
+    background:#f0f0f0;
+    font-family: 'Ubuntu', sans-serif;
+}
+#rfx4
+{
+  background: -webkit-linear-gradient(left,#FFB900,#FF8C00,#F7630C,#E74856,#E81123,#0078D7,#0063B1);
+   -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.content {
+	position: relative;
+	min-height: 300px;
+	overflow-x: hidden;
+}
+
+.content--full {
+	height: 100vh;
+	min-height: 600px;
+}
+
+.flexy {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+}
+
+.flexy--center {
+    justify-content: center;
+}
+
+.flexy--row {
+	flex-direction: row;
+}
+.flexy__items
+{
+    padding:1em;
+}
+.content__heading {
+	flex: none;
+	width: 100%;
+	/* padding: 0 1vw; */
+}
+
+.content__heading--center {
+	text-align: center;
+}
+
+.content__title {
+	font-size: 8vw;
+
+}
+
+.content__title--half {
+	width: 50vw;
+	z-index: 2;
+}
+
+.content__title--enclosed {
+	padding: 0;
+	margin: 0;
+}
+
+.content__title--center {
+    margin: auto;
+    text-align: center;
+}
+
+.content__title--right {
+	text-align: right;
+	padding: 0 0 0 2em;
+}
+
+.content__title--left {
+	margin-left: -18vw;
+}
+
+.content__title--medium  {
+	font-size: 5vw;
+}
+
+.content__title--small  {
+	font-size: 2vw;
+}
+
+.content__title__inner {
+	flex: none;
+	display: inline-block;
+	white-space: wrap;
+	position: relative;
+}
+
+.content__title__inner--offset-1 {
+    font-size: 4vw;
+	top: -0.25em;
+	left: 18.6vw;
+}
+
+.content__title__inner--offset-2 {
+	top: -0.25em;
+	left: 1.75vw;
+}
+
+.content__title__inner--offset-3 {
+	left: -10vw;
+	top: -0.25em;
+}
+.btn {
+	border: 0;
+	padding: 0;
+	margin: 0;
+	background: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.btn:focus {
+	outline: none;
+}
+
+.btn--trigger {
+	margin: 0.25em;
+	display: block;
+    white-space: nowrap;
+    border: 2px solid;
+    padding: 0.5em;
+}
+
+.triggers
+{
+    display: flex;
+    flex-flow: row wrap;
+}
+.dual {
+	width: 90vw;
+	margin: 2em auto;
+	position: relative;
+}
+
+.dual__inner {
+	position: absolute;
+	width: 100%;
+	height: 100%;	
+}
+
+.dual__half {
+	position: absolute;
+	height: 100%;
+	width: 50%;
+	right: 0;
+	background: url(img/raj-eiamworakul-603747-unsplash.jpg) no-repeat 50% 0%;
+	background-size: cover;
+}
+
+.dual__content {
+	position: relative;
+	width: 40%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 500px;
+	padding: 1.5em 2.5em;
+	font-size: 1.25em;
+	line-height: 1.4;
+    color: #ffffff;
+    opacity:0;
+}
+
+.dual__content.dual__content--show {
+	opacity: 1;
+	pointer-events: visible;
+	transform: translate(0,0);
+	-webkit-transform: translate(0,0);
+	-moz-transform: translate(0,0);
+	-ms-transform: translate(0,0);
+	-o-transform: translate(0,0);
+}
+
+@media screen and (max-width: 50em) {
+	
+	.content--full {
+		min-height: 0;
+	}
+	.content__title {
+		font-size: 2em;
+	}
+	.content__title--medium  {
+		font-size: 1.75em;
+	}
+	.content__title--small {
+		font-size: 1.15em;
+	}
+	.content__title--half {
+		width: 100%;
+	}
+	.content__title--right {
+		padding: 0 5vw;
+	}
+	.content__title--left {
+		margin-left: 0;
+	}
+	.flexy--row {
+	    flex-direction: column;
+	}
+	.triggers {
+		width: 100%;
+		border: 0;
+		padding: 0;
+		font-size: 0.85em;
+	}
+	.dual__content {
+		min-height: 200px;
+		font-size: 0.65em;
+		padding: 2.5em;
+	}
+	.dual {
+		margin-top: 0;
+	}
+}

@@ -1,0 +1,33 @@
+{
+  "name": "revealfx",
+  "version": "0.0.1",
+  "description": "This is a micro animation library based on anime.js to achieve smooth block reveal effects and has a simple API",
+  "main": "src/revealFx.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"browser-sync demo -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akhil0001/RevealFx.git"
+  },
+  "keywords": [
+    "anime.js",
+    "animation",
+    "reveal",
+    "revealFx",
+    "javascript"
+  ],
+  "author": "Akhil Sai Ram",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/akhil0001/RevealFx/issues"
+  },
+  "homepage": "https://github.com/akhil0001/RevealFx#readme",
+  "dependencies": {
+    "animejs": "^3.0.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.3"
+  }
+}
