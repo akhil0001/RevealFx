@@ -1,6 +1,7 @@
 # RevealFx
 ![](/demo/img/Friday.gif)
-*Documentation is still in work in progress*
+
+*Documentation is  work in progress*
 
 A lightweight animation plugin based on animejs for revealing effects animation with simple API that works in almost every major browser. 
  It works with the text, images or any UI element.
@@ -114,8 +115,8 @@ npm start
 
 ## ToDos
 
-[ ] reveal() method documentation.
+- [x] Add Images to Readme
 
-[ ] demo snippets update
+- [] demo snippets update
 
-[ ] links update in the documentation
+- [] links update in the documentation
