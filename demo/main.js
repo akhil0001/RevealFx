@@ -22,7 +22,7 @@ function showThemColors() {
    
     
     var revealSettings = {
-        bgColor: ['#111'],
+        bgColors: ['#111'],
         duration: 600,
         delay: 100,
         direction: 'lr',
@@ -36,7 +36,7 @@ function showThemColors() {
         }
     };
     var revealSettings2 = {
-        bgColor: ['#111'],
+        bgColors: ['#111'],
         duration: 400,
         delay: 100,
         direction: 'lr',
@@ -45,7 +45,7 @@ function showThemColors() {
         }
     };
     var revealSettings3 = {
-        bgColor: ['#FFB900','#FF8C00','#F7630C','#E74856','#E81123','#0078D7','#0063B1'],
+        bgColors: ['#FFB900','#FF8C00','#F7630C','#E74856','#E81123','#0078D7','#0063B1'],
         duration: 400,
         delay: 100,
         direction: 'lr',
@@ -75,7 +75,7 @@ function showThemColors() {
         isContentHidden:true,
         layers:4,
         revealSettings : {
-            bgColor: ['#2c2c38','#2c2c38','#2c2c38','#2c2c38'],
+            bgColors: ['#2c2c38','#2c2c38','#2c2c38','#2c2c38'],
             direction: 'rl',
             duration: 800,
             easing: 'easeInOutCirc',
@@ -124,8 +124,8 @@ function showThemColors() {
     }
     btn5.onclick = function() {
       
-      revealSettings.bgColor[0] = '#283593';
-      revealSettings2.bgColor[0] = '#FBC02D';
+      revealSettings.bgColors[0] = '#283593';
+      revealSettings2.bgColors[0] = '#FBC02D';
       revealerEffect.reveal(revealSettings);
     }
     btn6.onclick = function(){
@@ -176,7 +176,7 @@ function showThemColors() {
     resetTheSetting = function()
     {
         return {
-            bgColor: ['#FFB900','#FF8C00','#F7630C','#E74856','#E81123','#0078D7','#0063B1'],
+            bgColors: ['#FFB900','#FF8C00','#F7630C','#E74856','#E81123','#0078D7','#0063B1'],
             duration: 400,
             delay: 100,
             direction: 'lr',

@@ -52,14 +52,14 @@
 	RevealFx.prototype.options = {
 		// If true, then the content will be hidden until it´s "revealed".
 		isContentHidden: true,
-		//this is an experimental way of checking the layer effects 
+		//number of layers to be displayed 
 		layers:1,
 		// The animation/reveal settings. This can be set initially or passed when calling the reveal method.
 		revealSettings: {
 			// Animation direction: left right (lr) || right left (rl) || top bottom (tb) || bottom top (bt).
 			direction: 'lr',
 			// Revealers´s background color Array.
-			bgColor: ['#111'],
+			bgColors: ['#111'],
 			// Animation speed. This is the speed to "cover" and also "uncover" the element (seperately, not the total time).
 			duration: 500,
 			// Animation easing. This is the easing to "cover" and also "uncover" the element.
@@ -112,8 +112,8 @@
         {
         // Revealer element (the one that animates)
 		this.revealLayers.push(createDOMEl('div', 'block-revealer__element'));
-		if(this.options.revealSettings.bgColor[i])
-		colorOfBlockLayer = this.options.revealSettings.bgColor[i];
+		if(this.options.revealSettings.bgColors[i])
+		colorOfBlockLayer = this.options.revealSettings.bgColors[i];
 		else
 		colorOfBlockLayer = '#111111';
 		//to be refactored to default and check if it exists
@@ -196,7 +196,7 @@
 				duration: 500,
 				easing: 'easeInOutQuint',
 				delay: 100,
-				bgColor: ['#111111'],
+				bgColors: ['#111111'],
 				direction: 'lr',
 				coverArea: 0,
 			},
@@ -211,10 +211,10 @@
 				this.revealLayers[i].style.WebkitTransformOrigin = this.revealLayers[i].style.transformOrigin =  transformSettings.origin.initial;
 				// Show it. By default the revealer element has opacity = 0 (CSS).
 				this.revealLayers[i].style.opacity = 1;
-				if(revealSettings.bgColor[i])
-				this.revealLayers[i].style.backgroundColor = revealSettings.bgColor[i];
+				if(revealSettings.bgColors[i])
+				this.revealLayers[i].style.backgroundColor = revealSettings.bgColors[i];
 				else
-				this.revealLayers[i].style.backgroundColor = defaults.bgColor[0];
+				this.revealLayers[i].style.backgroundColor = defaults.bgColors[0];
 			}
 		
 		// Animate it.
