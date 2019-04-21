@@ -6,9 +6,7 @@
 A lightweight animation plugin based on animejs for revealing effects animation with simple API that works in almost every major browser. 
  It works with the text, images or any UI element.
 
-## Why?
-This is inspired from Mary Lou's Block Reveal Animation Tutorial. As part of a design for my portfolio website, I have used this effect for user's focus.
-This plugin draws major logic from the article but provides a lean and self descriptive API which can be used to create sleak and superb block animation. I hope you will find this library useful 
+
 
 ## Installation 
 - npm
@@ -117,6 +115,11 @@ npm start
 
 - [x] Add Images to Readme
 
-- [] demo snippets update
+- [ ] demo snippets update
 
-- [] links update in the documentation
+- [ ] links update in the documentation
+
+## Credits
+
+This is inspired from Mary Lou's Block Reveal Animation Tutorial. As part of a design for my portfolio website, I have used this effect for user's focus.
+This plugin draws major logic from the article but provides a lean,more options and self descriptive API which can be used to create sleak and superb block animation. I hope you will find this library useful 
