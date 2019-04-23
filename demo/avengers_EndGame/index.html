@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <title>Marvel Movies</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="title">All Marvel Movies to be watched before EndGame</h1>
+    <div class="flexy flexy--center">
+        <h1 class="movie__center">Iron Man</h1>
+    </div>
+    <div class="triggers">
+        <button class="btn btn--prev">
+            Previous
+        </button>
+        <div class="pagination">1/22</div>
+        <button class="btn btn--next">
+            Next
+        </button>
+    </div>
+    <script src="../anime.min.js"></script>
+    <script src="../revealFx.js"></script>
+    <script>
+    var btnNext = document.querySelector('.btn--next');
+    var btnPrev = document.querySelector('.btn--prev');
+    var flexy = document.querySelector('.movie__center');
+    var paginationText = document.querySelector('.pagination');
+    var counter = 1;
+    
+    var revealSettings = {
+        bgColors: ['#cc3c2d'],
+        duration: 400,
+        delay: 100,
+        direction: 'lr',
+        onStart: function (contentEl, revealerEl) {
+             contentEl.style.color = bgColorsforMovies[counter-1];
+             contentEl.innerText = movieNames[counter-1];
+        },
+        onHalfway: function (contentEl, revealerEl) {
+            contentEl.style.opacity = 1;
+            
+        }
+    };
+    var bgColorsforMovies = [
+        '#b71c1c','#1B5E20','#1A237E','#311B92','#827717','#BF360C','#3E2723','#E65100','#FF6F00','#263238','#1abc9c','#27ae60','#e74c3c','#2980b9','#f1c40f','#c0392b','#e67e22','#000000','#0050ef','#e74c3c','#BF360C','#4A148C'
+    ];
+
+    var movieNames = [
+        "Iron Man",
+        "The Incredible Hulk",
+        "Iron Man 2",
+        "Thor",
+        "Captain America: The First Avenger",
+        "The Avengers",
+        "Iron Man 3",
+        "Thor: The Dark World",
+        "Captain America: The Winter Soldier",
+        "Guardians of the Galaxy",
+        "Avengers: Age of Ultron",
+        "Ant Man",
+        "Captain America: Civil War",
+        "Doctor Strange",
+        "Guardians of the Galaxy Vol 2",
+        "Spider-Man: Homecoming",
+        "Thor:Ragnarok",
+        "Black Panther",
+        "Avengers:Infinity War",
+        "Ant-Man and The Wasp",
+        "Captain Marvel",
+        "Avengers: EndGame"
+    ]
+    const TotalMovies = movieNames.length;
+    var revealerEffect1 = new RevealFx(flexy, {
+        layers: 1,
+        isContentHidden : false,
+        revealSettings: revealSettings
+    });
+    btnNext.onclick = function()
+    {
+        if(counter<TotalMovies)
+        {
+        btnNext.disabled = false;
+        counter++;
+        paginationText.innerText = counter+'/'+TotalMovies;
+        revealSettings.bgColors[0] = bgColorsforMovies[counter-1];
+        revealerEffect1.reveal(revealSettings);
+        }
+        else
+        {
+            btnNext.disabled = true;
+        }
+         if(counter<TotalMovies && counter > 1)
+        {
+            btnPrev.disabled = false;
+        }
+        
+    }
+    btnPrev.onclick = function()
+    {
+        if(counter>1){
+        btnPrev.disabled = false;
+        counter--;
+        paginationText.innerText = counter+'/'+TotalMovies;
+        revealSettings.bgColors[0] = bgColorsforMovies[counter-1];
+        revealerEffect1.reveal(revealSettings);
+        }
+        else
+        {
+            btnPrev.disabled = true;
+        }
+         if(counter<TotalMovies && counter > 1)
+        {
+            btnNext.disabled = false;
+        }
+
+    }
+    </script>
+</body>
+</html>

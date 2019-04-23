@@ -1,9 +1,8 @@
 # RevealFx
-![](/demo/img/Friday.gif)
+![Image of Spiderman reading book  from unsplash and a quote 'If you doubt your beliefs, you believe your doubts , If you fail to practice, you practice failure](/demo/img/spidey.gif)
 
-*Documentation is  work in progress*
 
-A lightweight animation plugin based on animejs for revealing effects animation with simple API that works in almost every major browser. 
+A lightweight animation plugin based on animejs for revealing effects animation with simple API that works in  every major browser. 
  It works with the text, images or any UI element.
 
 
@@ -13,18 +12,19 @@ A lightweight animation plugin based on animejs for revealing effects animation 
 ```npm
 npm i revealfx
 ```
-- CDN link
+- CDN or unpkg [link](https://unpkg.com/revealfx@latest/src/revealFx.js)
+```
+https://unpkg.com/revealfx@latest/src/revealFx.js
+```
+
+> Note: You need to have >=3.0 version of anime.js for this plugn to work
 ```HTML
 <script src = "anime.min.js"></script>
-<script src = "dist/revealFx.js"></script>
+<script src = "revealFx.js"></script>
 ```
 ## Usage
-- Add *dist/revealFx.js* to your html 
-(or)
-- Import it as a module as shown below
-```js
-import revealFx;
-```
+- Add *src/revealFx.js* and link it to your html 
+
 ## Syntax
 
  - Inorder to implement the animation to a certain element, first select the element . For example : 
@@ -103,7 +103,8 @@ npm install
 npm start
 ```
 
-- Here is the live link for Codepen Demo
+- Here is the  [live link for Codepen Demo](https://codepen.io/akhil_001/full/zXamxp) 
+- If you are a comic book fan , then check out this [pen](https://codepen.io/akhil_001/full/GLBoEB) I made on the Avengers End Game
 
 ## Contribute
 - Fork it or clone it
@@ -115,11 +116,14 @@ npm start
 
 - [x] Add Images to Readme
 
-- [ ] demo snippets update
+- [x] links update in the documentation
 
-- [ ] links update in the documentation
+- [ ] demo snippets update
 
 ## Credits
 
-This is inspired from Mary Lou's Block Reveal Animation Tutorial. As part of a design for my portfolio website, I have used this effect for user's focus.
+This is inspired from [Mary Lou](https://tympanus.net/codrops/author/crnacura/)'s [Block Reveal Animation Tutorial](https://tympanus.net/codrops/2016/12/21/block-reveal-effects/). As part of a design for my portfolio website, I have used this effect for user's focus.
 This plugin draws major logic from the article but provides a lean,more options and self descriptive API which can be used to create sleak and superb block animation. I hope you will find this library useful 
+
+## License
+MIT 

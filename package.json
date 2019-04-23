@@ -1,6 +1,6 @@
 {
   "name": "revealfx",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "This is a micro animation library based on anime.js to achieve smooth block reveal effects and has a simple API",
   "main": "src/revealFx.js",
   "scripts": {
