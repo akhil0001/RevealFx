@@ -1,11 +1,12 @@
-# RevealFx
+# RevealFx 
+
 ![Image of Spiderman reading book  from unsplash and a quote 'If you doubt your beliefs, you believe your doubts , If you fail to practice, you practice failure](/demo/img/spidey.gif)
 
 
 A lightweight animation plugin based on animejs for revealing effects animation with simple API that works in  every major browser. 
  It works with the text, images or any UI element.
 
-
+> Please dont forget to star the project if you find it useful
 
 ## Installation 
 - npm
@@ -103,6 +104,10 @@ npm start
 
 - Here is the  [live link for Codepen Demo](https://codepen.io/akhil_001/full/zXamxp) 
 - If you are a comic book fan , then check out this [pen](https://codepen.io/akhil_001/full/GLBoEB) I made on the Avengers End Game
+- Here are few example demos created using this library
+
+    - ![Basic Example](/demo/img/Friday.gif)
+    - ![Colorful Example](/demo/img/Jarvis.gif)
 
 ## Contribute
 - Fork it or clone it
@@ -117,6 +122,10 @@ npm start
 - [x] links update in the documentation
 
 - [ ] demo snippets update
+
+- [ ] use template instead of create Element
+
+- [ ] create demo on the page transitions
 
 ## Credits
 
