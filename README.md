@@ -22,8 +22,6 @@ https://unpkg.com/revealfx@latest/src/revealFx.js
 <script src = "anime.min.js"></script>
 <script src = "revealFx.js"></script>
 ```
-## Usage
-- Add *src/revealFx.js* and link it to your html 
 
 ## Syntax
 
