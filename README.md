@@ -23,6 +23,19 @@ https://unpkg.com/revealfx@latest/src/revealFx.js
 <script src = "anime.min.js"></script>
 <script src = "revealFx.js"></script>
 ```
+## Demo
+-  Clone this repo and run the following commands for the demo 
+```node
+npm install 
+npm start
+```
+
+- Here is the  [live link for Codepen Demo](https://codepen.io/akhil_001/full/zXamxp) 
+- If you are a comic book fan , then check out this [pen](https://codepen.io/akhil_001/full/GLBoEB) I made on the Avengers End Game
+- Here are few example demos created using this library
+
+    - ![Basic Example](/demo/img/Friday.gif)
+    - ![Colorful Example](/demo/img/Jarvis.gif)
 
 ## Syntax
 
@@ -95,19 +108,6 @@ rev1.reveal(revealSettings);
         }
     ```
 
-## Demo
--  Clone this repo and run the following commands for the demo 
-```node
-npm install 
-npm start
-```
-
-- Here is the  [live link for Codepen Demo](https://codepen.io/akhil_001/full/zXamxp) 
-- If you are a comic book fan , then check out this [pen](https://codepen.io/akhil_001/full/GLBoEB) I made on the Avengers End Game
-- Here are few example demos created using this library
-
-    - ![Basic Example](/demo/img/Friday.gif)
-    - ![Colorful Example](/demo/img/Jarvis.gif)
 
 ## Contribute
 - Fork it or clone it
