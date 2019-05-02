@@ -1,13 +1,20 @@
 # RevealFx 
 
+[![HitCount](http://hits.dwyl.io/akhil0001/RevealFx.svg)](http://hits.dwyl.io/akhil0001/RevealFx)  
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)  
 ![Image of Spiderman reading book  from unsplash and a quote 'If you doubt your beliefs, you believe your doubts , If you fail to practice, you practice failure](/demo/img/spidey.gif)
 
 
-A lightweight animation plugin based on animejs for revealing effects animation with simple API that works in  every major browser. 
- It works with the text, images or any UI element.
+A javascript library to achieve beautiful block reveal animations
 
-> Please dont forget to star the project if you find it useful
+> If you find it useful, donot forget to :star:   star us -it does help!
 
+
+## Demo Links
+Here are the demo links to check out librarys and its uses
+ - [RevealFx Demo](https://codepen.io/akhil_001/full/zXamxp)
+- [Image List  Display with Block Reveal Effect](https://codepen.io/akhil_001/full/ZZZdPY)
+- [Marvel Marathon (Carousel)](https://codepen.io/akhil_001/full/GLBoEB)
 ## Installation 
 - npm
 ```npm
@@ -18,7 +25,7 @@ npm i revealfx
 https://unpkg.com/revealfx@latest/src/revealFx.js
 ```
 
-> Note: You need to have >=3.0 version of anime.js for this plugn to work
+> Note: You need to have >=3.0 version of anime.js 
 ```HTML
 <script src = "anime.min.js"></script>
 <script src = "revealFx.js"></script>
@@ -29,13 +36,6 @@ https://unpkg.com/revealfx@latest/src/revealFx.js
 npm install 
 npm start
 ```
-
-- Here is the  [live link for Codepen Demo](https://codepen.io/akhil_001/full/zXamxp) 
-- If you are a comic book fan , then check out this [pen](https://codepen.io/akhil_001/full/GLBoEB) I made on the Avengers End Game
-- Here are few example demos created using this library
-
-    - ![Basic Example](/demo/img/Friday.gif)
-    - ![Colorful Example](/demo/img/Jarvis.gif)
 
 ## Syntax
 
