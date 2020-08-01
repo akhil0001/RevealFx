@@ -5,7 +5,7 @@
   "main": "src/revealFx.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"browser-sync demo -w"
+    "start": "browser-sync demo -w"
   },
   "repository": {
     "type": "git",
@@ -28,6 +28,6 @@
     "animejs": "^3.0.1"
   },
   "devDependencies": {
-    "browser-sync": "^2.26.3"
+    "browser-sync": "^2.26.12"
   }
 }
