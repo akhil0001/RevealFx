@@ -20,8 +20,7 @@
 		return el;
    }
 
-	function createStyleForDOMEL(el, position, top, left, width, height, color, background, opacity, pointerEvents, zIndex)
-	{
+	function createStyleForDOMEL(el, position, top, left, width, height, color, background, opacity, pointerEvents, zIndex) {
 		//this is a helper function for creating the styles for a given element
 		el.style.position = position || 'absolute';
 		el.style.top = top || '0';
@@ -108,8 +107,7 @@
 		var leftOfRevalerElement=0;
 		const numberOfLayers = this.options.layers;
 		var colorOfBlockLayer ='#111';
-		for(var i = 0; i < numberOfLayers; i++)
-		{
+		for(var i = 0; i < numberOfLayers; i++) {
 			// Revealer element (the one that animates)
 			this.revealLayers.push(createDOMEl('div', 'block-revealer__element'));
 			if(this.options.revealSettings.bgColors[i])
@@ -117,20 +115,17 @@
 			else
 				colorOfBlockLayer = '#111111';
 			//to be refactored to default and check if it exists
-			if(this.options.revealSettings.direction === 'tb' || this.options.revealSettings.direction === 'bt')
-			{
+			if(this.options.revealSettings.direction === 'tb' || this.options.revealSettings.direction === 'bt') {
 				var widthOfIndividualBlock = widthOfEl / numberOfLayers;
 				createStyleForDOMEL(this.revealLayers[i], 'absolute', '0%', leftOfRevalerElement + '%', widthOfIndividualBlock + '%', '100%', '#fff', colorOfBlockLayer, '0', 'none');
 				leftOfRevalerElement = leftOfRevalerElement + widthOfIndividualBlock;
-			}
-	        else{
+			} else {
 				var heightOfIndividualBlock = heightOfEl / numberOfLayers;
 				createStyleForDOMEL(this.revealLayers[i], 'absolute', topOfRevealerElement + '%', '0%', '100%', (heightOfIndividualBlock+.5) + '%', '#fff', colorOfBlockLayer, '0', 'none');
 				topOfRevealerElement = topOfRevealerElement + heightOfIndividualBlock;
 			}
 
 			this.el.classList.add('block-revealer');
-
 			this.el.appendChild(this.revealLayers[i]);
       }
 	};
@@ -203,8 +198,7 @@
 			delay = revealSettings.delay || defaults.delay,
 			transformSettings = this._getTransformSettings(direction);
 
-		for(var i = 0; i < this.revealLayers.length; i++)
-		{
+		for(var i = 0; i < this.revealLayers.length; i++) {
 			this.revealLayers[i].style.WebkitTransform = this.revealLayers[i].style.transform =  transformSettings.val;
 			this.revealLayers[i].style.WebkitTransformOrigin = this.revealLayers[i].style.transformOrigin =  transformSettings.origin.initial;
 			// Show it. By default the revealer element has opacity = 0 (CSS).
@@ -250,8 +244,7 @@
 			if( direction === 'lr' || direction === 'rl' ) {
 				animationSettings.scaleX = [0, 1];
 				animationSettings_2.scaleX = [1, coverArea / 100];
-			}
-			else {
+			} else {
 				animationSettings.scaleY = [0, 1];
 				animationSettings_2.scaleY = [1, coverArea / 100];
 			}
