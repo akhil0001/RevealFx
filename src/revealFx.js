@@ -176,7 +176,7 @@
 	/**
 	 * Reveal animation. If revealSettings is passed, then it will overwrite the options.revealSettings.
 	 */
-	RevealFx.prototype.reveal = function(revealSettings) {
+	RevealFx.prototype.reveal = function(inputSettings) {
 
 		// Do nothing if currently animating.
 		if( this.isAnimating ) {
@@ -185,47 +185,52 @@
 		this.isAnimating = true;
 
 		// Set the revealer element´s transform and transform origin.
-		var defaults = { // In case revealSettings is incomplete, its properties deafault to:
+		var defaults = { // In case revealSettings is incomplete, its properties default to:
 				duration: 500,
 				easing: 'easeInOutQuint',
 				delay: 100,
 				bgColors: ['#111111'],
 				direction: 'lr',
 				coverArea: 0,
-			},
-			revealSettings = revealSettings || this.options.revealSettings,
-			direction = revealSettings.direction || defaults.direction,
-			delay = revealSettings.delay || defaults.delay,
-			transformSettings = this._getTransformSettings(direction);
+            preventDefaultEvents: false,
+			};
+      var revealSettings = {...defaults, ...this.options.revealSettings, ...inputSettings},
+         preventDefaultEvents = revealSettings.preventDefaultEvents || defaults.preventDefaultEvents,
+			transformSettings = this._getTransformSettings(revealSettings.direction),
+         init_onComplete = this.options.onComplete,
+         init_onHalfway = this.options.onHalfway,
+         init_onStart = this.options.onStart;
 
 		for(var i = 0; i < this.revealLayers.length; i++) {
 			this.revealLayers[i].style.WebkitTransform = this.revealLayers[i].style.transform =  transformSettings.val;
 			this.revealLayers[i].style.WebkitTransformOrigin = this.revealLayers[i].style.transformOrigin =  transformSettings.origin.initial;
 			// Show it. By default the revealer element has opacity = 0 (CSS).
 			this.revealLayers[i].style.opacity = 1;
-			if(revealSettings.bgColors[i])
+			if(revealSettings.bgColors && revealSettings.bgColors[i])
 				this.revealLayers[i].style.backgroundColor = revealSettings.bgColors[i];
 			else
 				this.revealLayers[i].style.backgroundColor = defaults.bgColors[0];
 		}
-
 		// Animate it.
 		var self = this,
 			// Second animation step.
 			animationSettings_2 = {
 				targets:self.revealLayers,
-				delay: anime.stagger(parseInt(delay)),
+				delay: anime.stagger(parseInt(revealSettings.delay)),
 				complete: function(anim) {
 					if(typeof revealSettings.onComplete === 'function') {
 						revealSettings.onComplete(self.content, self.revealLayers);
-					}
+               }
+					if(typeof init_onComplete === 'function' && !preventDefaultEvents) {
+                  init_onComplete(self.content, self.revealLayers);
+               }
                self.isAnimating = false;
             }
 			},
 			// First animation step.
 			animationSettings = {
 				targets:self.revealLayers,
-				delay: anime.stagger(parseInt(delay)),
+				delay: anime.stagger(parseInt(revealSettings.delay)),
 				complete: function() {
 					for(var i = 0; i < self.revealLayers.length; i++) {
 						self.revealLayers[i].style.WebkitTransformOrigin = self.revealLayers[i].style.transformOrigin = transformSettings.origin.halfway;
@@ -233,6 +238,9 @@
 					if(typeof revealSettings.onHalfway === 'function') {
 						revealSettings.onHalfway(self.content, self.revealLayers);
 					}
+               if(typeof init_onHalfway === 'function' && !preventDefaultEvents) {
+                  init_onHalfway(self.content, self.revealLayers);
+               }
 					anime(animationSettings_2);
 				}
 			};
@@ -241,7 +249,7 @@
 			animationSettings.easing = animationSettings_2.easing = revealSettings.easing || defaults.easing;
 
 			var coverArea = revealSettings.coverArea || defaults.coverArea;
-			if( direction === 'lr' || direction === 'rl' ) {
+			if( revealSettings.direction === 'lr' || revealSettings.direction === 'rl' ) {
 				animationSettings.scaleX = [0, 1];
 				animationSettings_2.scaleX = [1, coverArea / 100];
 			} else {
@@ -252,6 +260,9 @@
 			if(typeof revealSettings.onStart === 'function') {
 				revealSettings.onStart(self.content, self.revealLayers);
 			}
+         if(typeof init_onStart === 'function' && !preventDefaultEvents) {
+            init_onStart(self.content, self.revealLayers);
+         }
 			anime(animationSettings);
 
 	};
