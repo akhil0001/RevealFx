@@ -186,14 +186,14 @@
 
 		// Set the revealer element´s transform and transform origin.
 		var defaults = { // In case revealSettings is incomplete, its properties default to:
-				duration: 500,
-				easing: 'easeInOutQuint',
-				delay: 100,
-				bgColors: ['#111111'],
-				direction: 'lr',
-				coverArea: 0,
-            preventDefaultEvents: false,
-			};
+			duration: 500,
+			easing: 'easeInOutQuint',
+			delay: 100,
+			bgColors: ['#111111'],
+			direction: 'lr',
+			coverArea: 0,
+			preventDefaultEvents: false,
+		};
       var revealSettings = {...defaults, ...this.options.revealSettings, ...inputSettings},
          preventDefaultEvents = revealSettings.preventDefaultEvents || defaults.preventDefaultEvents,
 			transformSettings = this._getTransformSettings(revealSettings.direction),
